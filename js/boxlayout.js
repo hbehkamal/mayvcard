@@ -23,7 +23,7 @@ var Boxlayout = (function() {
 		$workPanels = $workPanelsContainer.children( 'div' ),
 		totalWorkPanels = $workPanels.length,
 		// navigating the work panels
-		$nextWorkItem = $workPanelsContainer.find( 'nav > span.bl-next-work' ),
+		$nextWorkItem = $workPanelsContainer.find( 'nav span.bl-next-work' ),
 		// bog section
 		$sectionBlog = $( '#bl-blog-section' ),
 		// blog items
@@ -34,12 +34,12 @@ var Boxlayout = (function() {
 		$blogPanels = $blogPanelsContainer.children( 'div' ),
 		totalBlogPanels = $blogPanels.length,
 		// navigating the work panels
-		$nextBlogItem = $blogPanelsContainer.find( 'nav > span.bl-next-blog' ),		
+		$nextBlogItem = $blogPanelsContainer.find( 'nav span.bl-next-blog' ),		
 		// if currently navigating the work items
 		isAnimating = false,
 		// close work panel trigger
-		$closeWorkItem = $workPanelsContainer.find( 'nav > span.bl-icon-close' ),
-		$closeBlogItem = $blogPanelsContainer.find( 'nav > span.close-blog' ),
+		$closeWorkItem = $workPanelsContainer.find( 'nav span.bl-icon-close' ),
+		$closeBlogItem = $blogPanelsContainer.find( 'nav span.close-blog' ),
 		
 		transEndEventNames = {
 			'WebkitTransition' : 'webkitTransitionEnd',
