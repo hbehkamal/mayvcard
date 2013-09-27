@@ -49,6 +49,31 @@ a:hover {
 	color: #fff;
 }
 
+.delayanimation1{
+	animation-delay:1s;
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	-o-animation-delay:1s;	
+}
+
+.delayanimation2{
+	animation-delay:1.5s;
+	-webkit-animation-delay:1.5s;
+	-moz-animation-delay:1.5s;
+	-o-animation-delay:1.5s;	
+}
+
+.delayanimation3{
+	animation-delay:2s;
+	-webkit-animation-delay:2s;
+	-moz-animation-delay:2s;
+	-o-animation-delay:2s;	
+}
+
+.image-gallery{
+	height:auto;
+}
+
 .container { 
 	width:100%!important;
 	height: 100%;
@@ -61,7 +86,7 @@ a:hover {
 	overflow: hidden;
 }
 
-.bl-main > section {
+.bl-main > section{
 	position: absolute;
 	width: 25%;
 	height: 100%;
@@ -77,7 +102,14 @@ a:hover {
 .about-overlay{
 	width:100%;
 	height:100%;
-	background:rgba(244,169,56,0.8);    /* set color overlay with opacity for about section of home page */
+	background:rgba(244,169,56,0.6);    /* set color overlay with opacity for about section of home page */
+	-webkit-transition: all 0.5s ease 0.5s;
+	-moz-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;	
+}
+
+.about-overlay:hover{
+	background:rgba(244,169,56,0); 
 }
 
 .bl-expand .about-overlay{
@@ -95,7 +127,14 @@ a:hover {
 	width:100%;
 	height:100%;
 	background:rgba(67,82,90,0.8);    /* set color overlay with opacity for portfolio or work section section of home page */
+	-webkit-transition: all 0.5s ease 0.5s;
+	-moz-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;		
 }
+
+.work-overlay:hover{
+	background:rgba(67,82,90,0.4);  
+}	
 
 .bl-expand .work-overlay{
 	background:rgba(67,82,90,1);    /* set color overlay (as you have set above) with opacity=1 for portfolio or work section section of home page */
@@ -112,7 +151,14 @@ a:hover {
 	width:100%;
 	height:100%;
 	background:rgba(84,84,83,0.8);    /* set color overlay with opacity for blog section section of home page */
+	-webkit-transition: all 0.5s ease 0.5s;
+	-moz-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;			
 }
+
+.blog-overlay:hover{
+	background:rgba(84,84,83,0.3); 
+}	
 
 .bl-expand .blog-overlay{
 	background:rgba(84,84,83,1);   /* set color overlay (as you have set above) with opacity=1 for blog section of home page */
@@ -129,7 +175,14 @@ a:hover {
 	width:100%;
 	height:100%;
 	background:rgba(85,166,159,0.8);    /* set color overlay with opacity for contact section section of home page */
+	-webkit-transition: all 0.5s ease 0.5s;
+	-moz-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;		
 }
+
+.contact-overlay:hover{
+	background:rgba(85,166,159,0.3); 
+}	
 
 .bl-expand .contact-overlay{
 	background:rgba(85,166,159,0.8);   /* set color overlay (as you have set above) with opacity=1 for contact section of home page */
@@ -213,7 +266,7 @@ a:hover {
 .bl-main > section .bl-icon-close {
 	position: absolute;
 	top: 10px;
-	right: 8px;
+	right: 0;
 	cursor: pointer;
 	z-index: 100;
 	opacity: 0;
@@ -231,12 +284,29 @@ div.bl-panel-items > div > div {
 	opacity: 0;
 	pointer-events: none;
 	position: absolute;
-	top: 60px;
+	top: 0px;
 	left: 70px;
 	right: 70px;
-	bottom: 30px;
+	bottom: 0px;
 	overflow: hidden;
 	overflow-y:auto;
+}
+
+.bl-content{
+	padding-bottom:40px;
+}
+
+.bl-panel-items .bl-content{
+	margin-bottom:90px;
+}	
+
+.contentsingle{
+	margin-top:60px;
+}
+
+.contenttitle{
+	margin-top:60px;
+	position:relative;
 }
 
 .bl-content p {
@@ -305,8 +375,8 @@ div.bl-panel-items > div {
 div.bl-panel-items > div > div {
 	margin: 0 auto;
 	opacity: 1;
-	bottom: 90px;
-	top: 90px;
+	padding-bottom: 90px;
+	padding-top: 90px;
 	pointer-events: auto;
 }
 
@@ -550,6 +620,7 @@ section.bl-expand .bl-icon-close {
 .image-gallery .span3{
 	text-align:center;
 	padding-bottom:90px;
+	min-height:453px;
 }
 
 .bl-panel-items-show .bl-icon-close{
@@ -613,7 +684,7 @@ section.bl-expand .bl-icon-close {
 }
 
 .blog-post:last-child{
-	margin-bottom:0;
+	margin-bottom:40px;
 }
 
 .date{
@@ -846,11 +917,13 @@ input[type="submit"] {
 {
 	overflow: hidden;
 	position: relative;
+	width:100%;	
 }
 
 .jspPane
 {
 	position: absolute;
+	width:100%!important;
 }
 
 .jspVerticalBar
@@ -861,6 +934,7 @@ input[type="submit"] {
 	width: 16px;
 	height: 100%;
 	background: red;
+	z-index:9999;
 }
 
 .jspHorizontalBar
@@ -964,7 +1038,8 @@ input[type="submit"] {
 .jspVerticalBar {
     width: 8px;
     background: transparent;
-    right:10px;
+    right:5px;
+	margin-top:60px;
 }
  
 .jspHorizontalBar {
@@ -1012,7 +1087,7 @@ input[type="submit"] {
 
 @media (min-width: 768px) {
 	.image-gallery .span3:nth-last-child(-n+4) { 
-		padding-bottom:0;
+		padding-bottom:40px;
 	}
 }
 
@@ -1116,4 +1191,12 @@ padding-bottom: 50px;
 	padding-bottom: 50px;
 }
 
+.bl-content{
+	height:100%;
+}
+
+.bl-content, div.bl-panel-items > div > div {
+left: 0;
+right: 0;
+}
 }
